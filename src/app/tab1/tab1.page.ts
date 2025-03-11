@@ -24,6 +24,7 @@ export class Tab1Page implements OnInit{
       }else{
         this.assetPath='public/assets/song.mp3'
       }
+      // i added this for testing purpose. you can use your actual code
       NativeAudio.preload({
         assetId: "fire",
         assetPath: this.assetPath,
