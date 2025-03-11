@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tab 1
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 1</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-button (click)="playsong()" *ngIf="!IsplayingSong">
+    Play song
+  </ion-button>
+  <br>
+  <ion-button (click)="stopSong()" color="warning" *ngIf="IsplayingSong">
+    Stop song
+  </ion-button>
+  
+  <ion-button (click)="toggleAudio()" expand="block" color="success">
+    Toggle Spkeaker {{IsSpeaker}}
+  </ion-button>
+  
+  <h2>
+    <span *ngIf="IsSpeaker">The Sound is on Speaker Mode!</span>
+    <span *ngIf="!IsSpeaker">The Sound is on Earpiece Mode!</span>
+  </h2>
+</ion-content>
